@@ -7,3 +7,6 @@ spacetime call quickstart-chat SendMessage "Hello, World!"
 spacetime logs quickstart-chat
 spacetime sql quickstart-chat "SELECT * FROM message"
 spacetime sql quickstart-chat "SELECT * FROM user"
+
+dotnet add package SpacetimeDB.ClientSDK
+spacetime generate --lang csharp --out-dir .\client\module_bindings\ --project-path server
